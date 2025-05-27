@@ -1,0 +1,36 @@
+body {
+  background-color: #282c34;
+  background-image: url('photobooth.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 97vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+@font-face {
+  font-family: 'ClassicNotes';
+  src: url('./fonts/Classic-Notes.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MagnoliaScript';
+  src: url('./fonts/MagnoliaScript.otf') format('truetype');
+}
+
+:root {
+  --beigeBox: #fef5de;
+  --background: #c9b5eb;
+  --cloudLight: #f0eef7;
+  --cloudDark: #d7c4ef;
+  --coinYellow: #f2c600;
+  --coinShadow: #a57a00;
+  --fontColor: #9b8bc7;
+  --starColor: #f5cd65;
+  --insertBox: #decdf9;
+}

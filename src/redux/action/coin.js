@@ -1,0 +1,1 @@
+export const COIN_INSERTED='COIN_INSERTED';
