@@ -8,7 +8,6 @@ const initialState = {
 export const layoutsDetails = (state = initialState, action) => {
     switch(action.type){
         case LAYOUTS:
-            console.log(action.payload)
             return {...state,layouts:action.payload.layouts,images:action.payload.images};
         default:
             return state;
