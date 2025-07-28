@@ -61,7 +61,7 @@ const Home = () => {
               soundRef.current.volume = 1;
             })
             .catch((err) => {
-              console.warn('Sound unlock failed:', err.message);
+              
             });
         }
       });
@@ -123,9 +123,9 @@ const Home = () => {
     if (notifySound.current) {
       notifySound.current.currentTime = 0;
       notifySound.current.play().then(() => {
-        console.log('Notify sound played.');
+        
       }).catch((err) => {
-        console.warn('Notify sound blocked:', err.message);
+        
       });
     }
   };
@@ -286,7 +286,6 @@ const StyleSheet = () => {
 
       /* Coin */
       .coin-container {
-        // margin-top: 20px;
       }
 
       .coin-processing {
