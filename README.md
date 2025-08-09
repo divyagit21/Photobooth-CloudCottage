@@ -2,10 +2,10 @@
 A fun and interactive PhotoBooth web application that lets you capture moments, apply cool filters, and download or share them instantly. Perfect for events, online meetups, or just having fun with friends.
 
 🚀 Features
-Live Camera Preview – See yourself before snapping the photo.
-One-Click Capture – Instantly take photos from your webcam.
-Custom Filters – Apply effects like grayscale, sepia, brightness adjustments, and more.
-Download & Share – Save your images locally or share them online.
+- Live Camera Preview – See yourself before snapping the photo.
+- One-Click Capture – Instantly take photos from your webcam.
+- Custom Filters – Apply effects like grayscale, sepia, brightness adjustments, and more.
+- Download & Share – Save your images locally or share them online.
 
 🔧 Installation & Setup
 ```bash
@@ -15,10 +15,10 @@ npm install
 ```
 
 🎯 Usage
-Start the app – Your webcam feed will appear.
-Click "Capture" – Takes a snapshot from your live preview.
-Apply Filters – Try different looks with instant previews.
-Save Your Photo – Download the edited image or share it directly.
+- Start the app – Your webcam feed will appear.
+- Click "Capture" – Takes a snapshot from your live preview.
+- Apply Filters – Try different looks with instant previews.
+- Save Your Photo – Download the edited image or share it directly.
 
 
 
