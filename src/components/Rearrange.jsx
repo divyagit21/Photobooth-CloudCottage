@@ -15,9 +15,8 @@ const Rearrange = () => {
   const images = useSelector((state) => state.images.images);
   const layout = useSelector((state) => state.layouts.layouts);
   const [handleNote, setHandleNote] = useState(false);
-  const [Note, setNote] = useState('')
   const navigate = useNavigate();
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
   const layoutRef = useRef();
 
 
@@ -25,9 +24,6 @@ const Rearrange = () => {
     return <p>No images selected. Please go back and add images.</p>;
   }
 
-  const handleAddNote = () => {
-    setHandleNote(true);
-  }
   const filterStyles = {
     none: {
       filter: '',
@@ -162,10 +158,10 @@ const Rearrange = () => {
       });
   };
 
-  const handleHome=()=>{
-    dispatch({type:COIN_INSERTED,payload:{coin:false}})
-    dispatch({type:CLEAR_IMAGE})
-    dispatch({type:LAYOUTS,payload:{layouts:0,images:0}})
+  const handleHome = () => {
+    dispatch({ type: COIN_INSERTED, payload: { coin: false } })
+    dispatch({ type: CLEAR_IMAGE })
+    dispatch({ type: LAYOUTS, payload: { layouts: 0, images: 0 } })
     navigate('/')
   }
 
@@ -270,14 +266,18 @@ const Rearrange = () => {
             overflow: "hidden",
             display: "inline-block",
             backgroundColor: color,
-          }} className='page-container'
+            width: "fit-content",
+            maxWidth: "100%",
+          }} 
+
+          className='page-container'
         >
           <div id="preview-layout">
             {renderLayout()}
           </div>
         </div>
 
-        {handleNote ? '' : <div className="decoration">
+        {<div className="decoration">
           <div className="side-container">
             <div className="side-heading">Photo Strip</div>
             <div className="side-box strip-color-options">
@@ -329,11 +329,18 @@ const Rearrange = () => {
 const StyleSheet = () => {
   return <style>{`
     
-    
-    #preview-wrapper {
-  scrollbar-width: none;       
-  -ms-overflow-style: none;    
+    img{
+      border-radius:5px;
+    }
+
+#preview-wrapper {
+  padding: 10px;
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+  overflow: visible;
 }
+
 
 #preview-wrapper::-webkit-scrollbar {
   display: none;              
@@ -348,7 +355,6 @@ const StyleSheet = () => {
 display: flex;
 flex-direction: column;
 gap: 4%;
-// margin-left: 40px;
 justify-content: center;
 }
 
@@ -372,13 +378,13 @@ gap: 10px;
 justify-content: center;
 }
 
-/* Color Circles */
 .color-button{
 width: 24px;
 height: 24px;
 border-radius: 50%;
 border: 1px solid #000;
 }
+
 input{
 width: 24px;
 height: 24px;
@@ -408,11 +414,11 @@ border: 1px solid #000;
   overflow-y:auto;
    scroll-behavior: smooth;
   scrollbar-width: thin;
-   scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+   scrollbar-width: none; 
+  -ms-overflow-style: none; 
 }
 .filter-options::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none; 
 }
 .filter-options button {
   padding: 10px 20px;
@@ -425,7 +431,6 @@ border: 1px solid #000;
 .filter-options button:hover {
   background-color: #e0e0e0;
 }
-
 
   .main-content{
       display:flex;
@@ -458,7 +463,6 @@ width: fit-content;
 margin: 30px auto 20px;
 text-align: center;
 border: 3px solid var(--fontColor);
-// position: relative;
 margin-top: 30px;
 z-index: 10;
 }
@@ -496,13 +500,13 @@ align-items: center;
 }
 
 .layout1 img {
-width: 120px;
-height: 120px;
+width: 220px;
+height: 220px;
 }
 
 .layout2 img {
-width: 100px;
-height: 100px;
+width: 170px;
+height: 170px;
 }
 
 .layout3 {
@@ -518,8 +522,8 @@ justify-content: center;
 }
 
 .layout3 img {
-width: 120px;
-height: 120px;
+width: 160px;
+height: 160px;
 }
 
 .layout4 {
@@ -530,9 +534,9 @@ align-items: center;
 }
 
 .layout4 .wide {
-width: 396px;
-height: 250px;
-border-radius: 16px;
+width: 400px;
+height: 300px;
+border-radius: 5px;
 }
 
 .layout4 .row {
@@ -541,20 +545,20 @@ gap: 10px;
 }
 
 .layout4 .small {
-width: 120px;
+width: 128px;
 height: 120px;
 }
 
 .layout5 .top-row {
 display: flex;
 gap: 10px;
-margin-bottom: 15px;
+margin-bottom: 12px;
 align-items: center;
 }
 
 .layout5 .wideTall {
-width: 270px;
-height: 260px;
+width: 320px;
+height: 300px;
 }
 
 .layout5 .column {
@@ -564,13 +568,13 @@ gap: 12px;
 }
 
 .layout5 .small {
-width: 127px;
-height: 123px;
+width: 150px;
+height: 145px;
 }
 
 .layout5 .row {
 display: flex;
-gap: 12px;
+gap: 15px;
 justify-content: center;
 }
 
@@ -620,9 +624,8 @@ cursor: pointer;
 min-width: 100px;
 }
 
-/* ----------------- Responsive Scaling Only ------------------ */
 
-@media (max-width: 768px) {
+@media (max-width: 875px) {
 .layout1 img,
 .layout2 img,
 .layout3 img,
@@ -634,7 +637,7 @@ height: 95px;
 }
 
 .layout4 .wide {
-width: 320px;
+width: 308px;
 height: 180px;
 }
 
@@ -687,7 +690,7 @@ height: 78px;
 }
 
 .layout4 .wide {
-width: 240px;
+width: 227px;
 height: 150px;
 }
 
@@ -715,10 +718,8 @@ padding: 8px 16px;
 width:100px;
 }
 }
-
-
 `}</style>
 }
 
-
 export default Rearrange;
+
