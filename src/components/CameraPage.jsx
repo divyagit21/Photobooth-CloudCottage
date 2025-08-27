@@ -126,7 +126,7 @@ const CameraPage = () => {
                 className="round-btn"
                 onClick={triggerTimerCapture}
               >
-                Click
+                Capture
               </SoundButton>
 
               <SoundButton
@@ -134,7 +134,7 @@ const CameraPage = () => {
                 onClick={handleFinalize}
                 disabled={!currentPreview}
               >
-                Accept
+                Finalize
               </SoundButton>
 
               <div style={{ display: 'flex', gap: '5px', alignItems: 'center' }}>
@@ -143,7 +143,7 @@ const CameraPage = () => {
                 <button className="round-btn" onClick={() => setTimerDuration(t => t + 1)}>+</button>
               </div>
 
-              <SoundButton className="round-btn" disabled={!currentPreview} onClick={handleRetry}>Retry</SoundButton>
+              <SoundButton className="round-btn" disabled={!currentPreview} onClick={handleRetry}>Retake</SoundButton>
               <SoundButton className="round-btn">Images: {count}/{layoutImageLimit}</SoundButton>
             </div>
             : <div>
