@@ -1,5 +1,5 @@
-📸 PhotoBooth
-A fun and interactive PhotoBooth web application that lets you capture moments, apply cool filters, and download or share them instantly. Perfect for events, online meetups, or just having fun with friends.
+--- 📸 PhotoBooth - CloudCottage
+- A fun and interactive PhotoBooth web application that lets you capture moments, apply cool filters, and download or share them instantly. Perfect for events, or just having fun with friends.
 
 🚀 Features
 - Live Camera Preview – See yourself before snapping the photo.
